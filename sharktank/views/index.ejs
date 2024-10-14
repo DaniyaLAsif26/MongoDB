@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skark Tank India Wiki - Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <nav>
+        <img src="assets/1.png" alt="">
+    </nav>
+
+    <div class="lines">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+
+    <div class="btns">
+        <form action="https://heartupmysleeves.com/?srsltid=AfmBOor3SqctxZQzFWndR82hhm2yz40e7HejJ_QYGwftJlHZZaBBAlAz">
+            <button>Season 1</button>
+        </form>
+        <form action="">
+            <button>Season 2</button>
+        </form>
+        <form action="">
+            <button>Season 3</button>
+        </form>
+    </div>
+
+    <div class="lines">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+
+    <% for (let data of s1) { %>
+        <h1> Episode :- <%=data._id %>
+        </h1>
+
+        <div class="cont">
+            <% for (let pitch of data.pitches) { %>
+                <div class="cont-data">
+
+                    <div class="pitch">Pitch No : <%= pitch.pitchNo %>
+                    </div>
+
+                    <div class="brand">Brand : <%= pitch. brand%>
+                    </div>
+
+                    <div class="idea">Idea : <%= pitch.idea %>
+                    </div>
+
+                    <div class="city">
+                        City : <%= pitch.city %>
+                    </div>
+
+                    <div class="ask">Ask : <%= pitch.ask %>
+                    </div>
+
+                    <div class="deal">Deal at : <%= pitch.deal %>
+                    </div>
+
+                    <div class="sharks"> Sharks : <%= pitch.investment %>
+                    </div>
+
+                    <form  action=" <%= pitch.link %>" id="cont-form" >
+                        <button id="cont-btn"> Visit </button>
+                    </form>
+                </div>
+                <% } %>
+        </div>
+        <% } %>
+
+            <script src="script.js"></script>
+
+</body>
+
+</html>
